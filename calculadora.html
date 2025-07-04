@@ -1,42 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br">              
     <head>
-        <title>sintase basica</title>
+        <title>sintaxe basica</title>
         <link rel="stylesheet" type="text/css">
         <script src="jquery.js"></script>
         <script>
+            //adiciona valor
+            function adicionar(valor){
+                document.getElementById('visor').value += valor;
+            }
+            function limpar(){
+                document.getElementById('visor').value = ""; 
+            }
+            function calcular(){
+                var visor =  document.getElementById('visor');
+                try{
+                    visor.value = eval(visor.value);
+                }catch(){
+                    visor.value = "Erro";
+                }
+            }
+
 
         </script>
-    <head>
-<body>
-  <input type="text" id="visor">
-   <br><br>
-   <buton class="botao" onclick="adicionar('1')";>1</buton>
-   <buton class="botao" onclick="adicionar('2)";>2</buton>
-   <buton class="botao" onclick="adicionar('3')";>3</buton>
-   <buton class="botaoo" onclick="adicionar('+')";>+</buton>
-   <buton class="botaoo" onclick="adicionar('-')";>-</buton>
-   <br><br>
-   <buton class="botao" onclick="adicionar('4')";>4</buton>
-   <buton class="botao" onclick="adicionar('5')";>5</buton>
-   <buton class="botao" onclick="adicionar('6')";>6</buton>
-   <buton class="botaoo" onclick="adicionar('^')";>^</buton>
-   <buton class="botaoo" onclick="adicionar('/')";>/</buton>
-   <br><br>
-   <buton class="botao" onclick="adicionar('7')";>7</buton>
-   <buton class="botao" onclick="adicionar('8')";>8</buton>
-   <buton class="botao" onclick="adicionar('9')";>9</buton>
-   <buton class="botaoo" onclick="adicionar('*')";>X</buton>
-   <buton class="botaoo" onclick="adicionar('')";>(</buton>
-   <br><br>
-   <buton class="botaoo" onclick="adicionar('.')";>.</buton>
-   <buton class="botao" onclick="adicionar('0')";>0</buton>
-   <buton class="botaoo" onclick="adicionar(',')";>,</buton>
-   <buton class="botaoo" onclick="adicionar('')";>)</buton>
-   <buton class="botaoo" onclick="adicionar('%')";>%</buton>
-   <br><br>
-   <buton class="botaooo" onclick="limpar()";></buton>
-   <buton class="botaoooo" onclick="calcular()";></buton>
-  </body>     
-</html>
+        <style>
+            .botao{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(223, 22, 146);
+            }
+            .botaoo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(221, 131, 186);
+            }
+            .botaooo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(249, 75, 194);
+            }
+            .botaoooo{
+                width:3%;
+                height:1.5%;
+                background-color: rgb(239, 139, 179);
+            }
+    
 
+        </style>
+    </head>
+    <body>
+        <input type="text" id="visor">
+        <br><br>
+        <button class="botao" onclick="adicionar('1')";>1</button>
+        <button class="botao" onclick="adicionar('2')";>2</button>
+        <button class="botao" onclick="adicionar('3')";>3</button>
+        <button class="botaoo" onclick="adicionar('+')";>+</button>
+        <button class="botaoo" onclick="adicionar('-')";>-</button>
+        <br><br>
+        <button class="botao" onclick="adicionar('4')";>4</button>
+        <button class="botao" onclick="adicionar('5')";>5</button>
+        <button class="botao" onclick="adicionar('6')";>6</button>
+        <button class="botaoo" onclick="adicionar('^')";>^</button>
+        <button class="botaoo" onclick="adicionar('/')";>/</button>
+        <br><br>
+        <button class="botao" onclick="adicionar('7')";>7</button>
+        <button class="botao" onclick="adicionar('8')";>8</button>
+        <button class="botao" onclick="adicionar('9')";>9</button>
+        <button class="botaoo" onclick="adicionar('*')";>X</button>
+        <button class="botaoo" onclick="adicionar('')";>(</button>
+        <br><br>
+        <button class="botaoo" onclick="adicionar('.')";>.</button>
+        <button class="botao" onclick="adicionar('0')";>0</button>
+        <button class="botaoo" onclick="adicionar(',')";>,</button>
+        <button class="botaoo" onclick="adicionar('')";>)</button>
+        <button class="botaoo" onclick="adicionar('%')";>%</button>
+        <br><br>
+        <button class="botaooo" onclick="limpar()";>C</button>
+        <button class="botaoooo" onclick="calcular()";>=</button>
+    </body>
+</html>
