@@ -10,42 +10,39 @@
                 document.getElementById('visor').value += valor;
             }
             function limpar(){
-                document.getElementById('visor').value = ""; 
+                document.getElementById('visor').value = "";
             }
             function calcular(){
-                var visor =  document.getElementById('visor');
+                var visor = document.getElementById('visor');
+
                 try{
                     visor.value = eval(visor.value);
-                }catch(){
+                }catch(error){
                     visor.value = "Erro";
                 }
             }
-
-
         </script>
         <style>
             .botao{
                 width:3%;
                 height:1.5%;
-                background-color: rgb(223, 22, 146);
+                background-color:rgb(248, 174, 186);
             }
             .botaoo{
                 width:3%;
-                height:1.5%;
-                background-color: rgb(221, 131, 186);
+                height: 1.5%;
+                background-color:rgb(224, 31, 118);
             }
             .botaooo{
-                width:3%;
-                height:1.5%;
-                background-color: rgb(249, 75, 194);
+                width:4%;
+                height:2%;
+                background-color:rgb(225, 61, 151);
             }
             .botaoooo{
-                width:3%;
-                height:1.5%;
-                background-color: rgb(239, 139, 179);
+                width:4%;
+                height:2%;
+                background-color:rgb(255, 105, 168);
             }
-    
-
         </style>
     </head>
     <body>
