@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+ <html lang="pt-br">              
     <head>
-        <title>sintase basica</title>
-        <link real="stylesheet" type="text/css">
+        <title>sintaxe basica</title>
+        <link rel="stylesheet" type="text/css">
         <script src="jquery.js"></script>
         <script>
 
         </script>
-    <head>
-</html>
+    </head>
     <body>
-         <form action="curriculo.php" method="POST">
-            <fieldset>      
-             <legend>curriculo do biel</legend>
-            Nome Completo:<input typy="text" required></br>
-            Telefone: <input typy="number" required></br>
+        <form action="curriculo.php" method="POST">
+            <fieldset>
+                <legend>curriculo do meu amor</legend>
+                Nome Completo:<input type="text" minlength="15" maxlength="30" placeholder="Nome Completo" required></br>
+                Telefone:<input type="text" minlength="11" maxlength="30" placeholder="Telefone" required></br>
+                Data de nascimento:<input type="date" required></br>
+                Email:<input type="email" minlength="10" maxlength="20" placeholder="email" required></br>
+                Gênero:
+                            M <input type="checkbox">
+                            F <input type="checkbox">
+                            Outros <input type="checkbox"></br>
 
+                Informações Adicionais:</br>
+                <textarea></textarea>
+                <input type="submit" value="Pedro">
 
-
-
-
-                
-             <input type="submit" value="gabriel">
-            </fieldset> 
-         </form>
+        </form>
     </body>
 </html>
+
